@@ -1,0 +1,16 @@
+# robots.txt for Mini Social Media
+# Allow all search engines to crawl the site
+
+User-agent: *
+Allow: /
+
+# Disallow private/sensitive pages
+Disallow: /dashboard/
+Disallow: /message/
+Disallow: /chat-privately/
+
+# Sitemap location
+Sitemap: https://minisocialmedia.com/sitemap.xml
+
+# Crawl-delay for polite crawling
+Crawl-delay: 1

@@ -1,0 +1,190 @@
+/* Outer page container */
+.post-page {
+  max-width: 900px;
+  margin: 50px auto;
+  font-family: 'Poppins', sans-serif;
+  color: #fff;
+  background: linear-gradient(135deg, #4f46e5 0%, #0d9488 100%);
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(79, 70, 229, 0.4);
+}
+
+/* Headings */
+.post-page h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #f59e0b;
+  text-shadow: 0 2px 5px rgba(0,0,0,0.4);
+  animation: fadeIn 1s ease forwards;
+}
+
+/* Create post section */
+.create-post {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background: rgba(79, 70, 229, 0.1);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(79, 70, 229, 0.2);
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(79, 70, 229, 0.1);
+  animation: slideIn 0.8s ease forwards;
+}
+
+.create-post input[type="file"] {
+  border: 2px dashed #ff6b81;
+  padding: 10px;
+  border-radius: 10px;
+  background: #1e1e2f;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.create-post input[type="file"]:hover {
+  border-color: #ff9aa2;
+  background: #292940;
+}
+
+.create-post textarea {
+  resize: none;
+  padding: 12px;
+  border-radius: 10px;
+  border: 2px solid #ff6b81;
+  background: #1e1e2f;
+  color: #fff;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.create-post textarea:focus {
+  border-color: #ff9aa2;
+  outline: none;
+  box-shadow: 0 0 10px rgba(255,107,129,0.5);
+}
+
+.create-post button {
+  padding: 12px;
+  border: none;
+  border-radius: 12px;
+  background: #ff6b81;
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(255,107,129,0.4);
+}
+
+.create-post button:hover {
+  background: #ff4c61;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(255,76,97,0.6);
+}
+
+/* Post cards */
+.post-card {
+  background: linear-gradient(135deg, rgba(79, 70, 229, 0.1) 0%, rgba(13, 148, 136, 0.1) 100%);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(79, 70, 229, 0.2);
+  border-radius: 20px;
+  margin: 25px 0;
+  padding: 20px;
+  box-shadow: 0 10px 25px rgba(79, 70, 229, 0.1);
+  animation: fadeInUp 0.8s ease forwards;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.post-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.5);
+}
+
+/* Post image */
+.post-card img {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 15px;
+  margin: 15px 0;
+  transition: transform 0.4s ease;
+}
+
+.post-card img:hover {
+  transform: scale(1.05);
+}
+
+/* Buttons inside post card */
+.post-card button {
+  margin-right: 10px;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 12px;
+  background: #0d9488;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.post-card button:hover {
+  background: #0891b2;
+  transform: translateY(-2px);
+}
+
+/* Comments section */
+.comments {
+  margin-top: 15px;
+  padding-top: 10px;
+  border-top: 1px solid #444;
+}
+
+.comments input[type="text"] {
+  width: calc(100% - 100px);
+  padding: 10px;
+  border-radius: 10px;
+  border: 2px solid #ff6b81;
+  background: #1e1e2f;
+  color: #fff;
+  margin-right: 10px;
+  transition: all 0.3s ease;
+}
+
+.comments input[type="text"]:focus {
+  border-color: #ff9aa2;
+  outline: none;
+  box-shadow: 0 0 8px rgba(255,107,129,0.5);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(-20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideIn {
+  0% { opacity: 0; transform: translateX(-50px); }
+  100% { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes fadeInUp {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Scrollbar for post page */
+.post-page::-webkit-scrollbar {
+  width: 10px;
+}
+
+.post-page::-webkit-scrollbar-thumb {
+  background: #f59e0b;
+  border-radius: 10px;
+}
+
+.post-page::-webkit-scrollbar-track {
+  background: #1e1e2f;
+}
